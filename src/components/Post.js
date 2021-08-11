@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Post() {
     const [posts, setPosts] = useState([])
@@ -11,11 +11,11 @@ function Post() {
         <div>
             <h2>Posts</h2>
             {posts.map((post) => {
-                return(
-                <div key={post.id}>
-                    <h3>{post.title}</h3>
-                    <p>{post.body}</p>
-                </div>
+                return (
+                    <div key={post.id}>
+                        <h3>{post.title}</h3>
+                        <p>{post.body}</p>
+                    </div>
                 )
             })}
         </div>
