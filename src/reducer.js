@@ -1,5 +1,5 @@
 lastId = 0
-function reducer(state = [], action) {
+export default function reducer(state = [], action) {
     if (action === "BUG_ADDED") {
         return [...state, {
             id: ++lastId,
