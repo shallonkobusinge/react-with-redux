@@ -8,29 +8,37 @@ function App() {
 
   // const transform = pipe(trim,toLowerCase,wrap("div"))
   // transform(input)
-  const person = {
-    name: "Shallon",
-    address: {
-      country: "United States",
-      city: "New York"
-    }
-  }
-  const updated = [{
-    name: "Shallon",
-    address: {
-      country: "United States",
-      city:"New"
-    }  
-  
-  }]  // console.log(updated)
-  const newPerson = Object.assign({},person,{name: "Shallon",age: 30})
-  console.log(newPerson) // console.log(newPerson)
+  // const person = {
+  //   name: "Shallon",
+  //   address: {
+  //     country: "United States",
+  //     city: "New York"
+  //   }
+  // }
+  // const updated = [{
+  //   name: "Shallon",
+  //   address: {
+  //     country: "United States",
+  //     city:"New"
+  //   }  
+
+  // }]  // console.log(updated)
+  // const newPerson = Object.assign({},person,{name: "Shallon",age: 30})
+  // console.log(newPerson) // console.log(newPerson)
+  const numbers = [1, 2, 3, 4]
+  const index = numbers.indexOf(3)
+  //adding
+  const added = [...numbers.slice(0, index), 15, ...numbers.slice(index)]
+  //removing
+  const removed = numbers.filter((n) => n != 3)
+  //updating
+  const update = numbers.map(n => n === 3 ? 30 : n)
   return (
     <div >
-      {updated.map((one,index) => {
+      {update.map((one, index) => {
         return (
           <div key={index}>
-          <h2>{one.name}</h2>
+            <h2>{one}</h2>
           </div>
         )
       })}
