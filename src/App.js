@@ -19,16 +19,18 @@ function App() {
     name: "Shallon",
     address: {
       country: "United States",
-      city: "New York"
+      city:"New"
     }  
   
   }]  // console.log(updated)
+  const newPerson = Object.assign({},person,{name: "Shallon",age: 30})
+  console.log(newPerson) // console.log(newPerson)
   return (
     <div >
       {updated.map((one,index) => {
         return (
           <div key={index}>
-          <h2>{one}</h2>
+          <h2>{one.name}</h2>
           </div>
         )
       })}
