@@ -1,4 +1,4 @@
-import {compose, pipe} from 'lodash';
+import {compose, pipe} from 'lodash/fp';
 function App() {
   let input = "Javascript"
   let output = "<div>"+input.trim()+"</div>"
@@ -10,7 +10,7 @@ function App() {
   transform(input)
   return (
       <div>
-        
+        <h2>{transform(input)}</h2>
       </div>
     );
 };
