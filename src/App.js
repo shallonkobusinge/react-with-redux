@@ -1,5 +1,6 @@
 // import { compose, pipe } from 'lodash/fp';
 import store from './store'
+import {BUG_ADDED,BUG_REMOVED} from './ActionTypes'
 function App() {
   // let input = "Javascript"
   // let output = "<div>"+input.trim()+"</div>"
@@ -35,19 +36,19 @@ function App() {
   //updating
   const update = numbers.map(n => n === 3 ? 30 : n)
   store.dispatch({
-    type:"BUG_ADDED",
+    type:BUG_ADDED,
     payload:{
       description:"First Bug"
     }
   })
   store.dispatch({
-    type:"BUG_ADDED",
+    type:BUG_ADDED,
     payload:{
       description:"Second Bug"
     }
   })
   store.dispatch({
-    type:"BUG_REMOVED",
+    type:BUG_REMOVED,
     payload:{
       id:1
     }
